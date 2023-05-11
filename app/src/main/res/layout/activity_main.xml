@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/istockphoto_1331674599_640x640"
+    android:alpha="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+
+
+        android:padding="4dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="30dp"
+            android:text="@string/reservation"
+            android:textAppearance="bold"
+            android:fontFamily="@font/spicy_rice"
+            android:textAlignment="center"
+
+            android:layout_gravity="center_horizontal"/>
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:fontFamily="@font/spicy_rice"
+            android:hint="Name" />
+
+        <EditText
+            android:id="@+id/mobileEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:fontFamily="@font/spicy_rice"
+            android:textColor="@color/black"
+            android:hint="Mobile Number" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="bold"
+                android:fontFamily="@font/spicy_rice"
+                android:textSize="20dp"
+                android:text="@string/group" />
+
+            <NumberPicker
+                android:id="@+id/groupSizePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="82dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:textAppearance="bold"
+                android:fontFamily="@font/spicy_rice"
+                android:textSize="20dp"
+                android:text="@string/date" />
+
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffbc84"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:spinnersShown="true"
+                android:textColor="@android:color/black"
+                android:theme="@style/MyDatePickerStyle" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/spicy_rice"
+                android:text="@string/time"
+                android:textAppearance="bold"
+                android:textSize="20dp" />
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffbc84"
+                android:calendarViewShown="false"
+                android:textColor="@android:color/black"
+                android:theme="@style/MyTimePickerStyle"
+                android:timePickerMode="Spinner" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/smokingRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffbc84"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/smokingRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffbc84"
+                android:text="@string/smoking" />
+
+            <RadioButton
+                android:id="@+id/nonSmokingRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ffbc84"
+                android:text="@string/nonsmoking" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:backgroundTint="#E1D9D1"
+            android:text="@string/confirm" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="match_parent"
+            android:backgroundTint="#E1D9D1"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="@string/reset" />
+
+        <TextView
+            android:id="@+id/reservationDetailsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resetButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:background="#000000"
+            android:gravity="center_vertical"
+            android:text="@string/details"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reservationDetailsTextView"
+            android:background="#000000"
+            android:text="@string/name"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mobileNumberTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nameTextView"
+            android:background="#000000"
+            android:text="@string/no"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/groupSizeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mobileNumberTextView"
+            android:background="#000000"
+            android:text="@string/group"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/groupSizeTextView"
+            android:background="#000000"
+            android:text="@string/date"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/timeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateTextView"
+            android:background="#000000"
+            android:text="@string/time"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/smokingAreaTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/timeTextView"
+            android:background="#000000"
+            android:text="@string/smoking"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+
